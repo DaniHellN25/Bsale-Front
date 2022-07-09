@@ -16,7 +16,7 @@ const card = (item) => {
         <p style="font-weight: bold" class="col s1 m1 l1 left">${item.price}</p>
         ${
           item.discount > 0
-            ? `<p><i class="material-icons col s1 m1 l1 offset-s3 offset-m2 offset-l4">money_off</i></p> <p style="font-weight: bold; font-size: 2rem" class="col s3 m3 l3 left">${item.priceWithDiscount}</p>`
+            ? `<p><i class="material-icons col s1 m1 l1 offset-s2 offset-m2 offset-l2">money_off</i></p> <p style="font-weight: bold; font-size: 2rem" class="col s3 m3 l3 left">${item.priceWithDiscount}</p>`
             : ""
         }
       </div>
