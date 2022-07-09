@@ -18,6 +18,7 @@
   <body>
             <!-- NavBar -->
           <!-- Dropdown Structure -->
+          <div class="navbar-fixed">
           <nav class="z-depth-5 blue-grey darken-2">
           <div class="container row">
               <div class="nav-wrapper col s12">
@@ -29,42 +30,40 @@
               </div>
             </div>
           </nav>
+        </div>
+        <div class="navbar-fixed">
           <nav class="mySearch z-depth-5 blue-grey darken-2">
             <div class="container"></div>
             <div class=" nav-wrapper">
-                  <form class="container col l5">
+                  <form id="searchBar" class="container col l5">
                     <div class="input-field">
-                      <input id="search" class="blue-grey lighten-2" type="search" placeholder="Buscar productos" required>
+                      <input class="blue-grey lighten-2" type="search" placeholder="Buscar productos" required>
                       <label class="label-icon" for="search"><i class="material-icons">search</i></label>
                       <i class="material-icons">close</i>
                     </div>
                   </form>
             </div>
             </nav>
+          </div>
       <section>
-        <div>
+        <div >
           <br>
         </div>
       </section>
+   
       <section class="orderName z-depth-5 blue-grey lighten-4">
         <div class="container section center">
           <div class="row container">
-            <button class="myBtn col s2 m2 l2 btn red">Todos</button>
-            <button class="myBtn col s2 m2 l2 btn red">A-Z</button>
-            <button class="myBtn col s2 m2 l2 btn red">Z-A</button>
+            <button class="myBtn col s2 m2 l2 btn red" onclick="getAllItems()">Todos</button>
+            <button id="ASC" class="myBtn col s2 m2 l2 btn red">A-Z</button>
+            <button id="DESC" class="myBtn col s2 m2 l2 btn red">Z-A</button>
           </div>
         </div>
       </section>
       <section class="z-depth-5 blue-grey lighten-4">
-        <div class="categories container section center">
-          <div class="row container">
-            <button class="myBtn col s2 m2 l2 btn red">snack</button>
-            <button class="myBtn col s2 m2 l2 btn red">snack</button>
-            <button class="myBtn col s2 m2 l2 btn red">snack</button>
-            <button class="myBtn col s2 m2 l2 btn red">snack</button>
-            <button class="myBtn col s2 m2 l2 btn red">snack</button>
-            <button class="myBtn col s2 m2 l2 btn red">snack</button>
-            <button class="myBtn col s2 m2 l2 btn red">snack</button>
+        <div class="container">
+          <div id="categories" class="row ">
+            <!-- Categories buttons-->
           </div>
         </div>
       </section>
@@ -72,34 +71,21 @@
                       <section class="z-depth-5 blue-grey lighten-4">
                         
                         <div class="container section">
-                          <div class="row">
-                   
-                          
-                             
-                                    <div class="col s8 m4 l4">
-                                      <div class="card small hoverable">
-                                        <div class="card-image">
-                                          <img class="responsive-img" src="https://images.pexels.com/photos/1580625/pexels-photo-1580625.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
-                                          <span class="card-title blue-text">Card Title</span>
-                                        </div>
-                                        <div class="card-content red">
-                                          <p><i class="material-icons col s3">attach_money</i></p>
-                                          <p class="col s3">45.54</p>
-                                          <p><i class="material-icons col s3">money_off</i></p>
-                                          <p class="col s3">45.54</p>
-                                        </div>
-                                        <div class="card-action center">
-                                          <a href="#"><i class="material-icons">add_shopping_cart</i></a>
-                                        </div>
-                                      </div>
-                                    </div>
-                        
+                          <div id="cardContainer" class="row">
+                            <!-- items cards -->
                             </div>
                           </div>
                       </section>
+                      <footer class="container row"> 
+                        <a href="#">
+                          <button style="border-radius: 20%; height: 3rem;" class="col s12 m12 l12 btn red">Subir</button>
+                        </a>
+                      </footer>
                     <!--JavaScript at end of body for optimized loading-->
                     <!--Scripts section-->
-
+    <script src="./src/allProducts.js"></script>
+    <script src="./src/filterByCategory.js"></script>
+    <script src="./src/orderByName.js"></script>
 
                   <!-- Compiled and minified JavaScript(Materialized) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
