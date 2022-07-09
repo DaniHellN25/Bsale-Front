@@ -1,13 +1,13 @@
 const itemContainer = document.getElementById("cardContainer");
 const categoriesContainer = document.getElementById("categories");
 
-const api = "https://bsale-store-d.herokuapp.com/";
-// const api = "http://localhost:3001/";
+// const api = "https://bsale-store-d.herokuapp.com/";
+const api = "http://localhost:3001/";
 
 const card = (item) => {
   return `
-    <div  class="col s8 m4 l4">
-    <div style="border-radius: 10%" class="card medium hoverable">
+    <div   class="col s8 m4 l4">
+    <div  class="card medium hoverable">
       <div  class="card-image">
         <img  src="${item.image}">
         
