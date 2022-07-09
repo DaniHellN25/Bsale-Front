@@ -1,7 +1,7 @@
 const itemContainer = document.getElementById("cardContainer");
 const categoriesContainer = document.getElementById("categories");
 
-const api = "http://localhost:3001/" || "https://bsale-store-d.herokuapp.com/";
+const api = "https://bsale-store-d.herokuapp.com/";
 
 const card = (item) => {
   return `
