@@ -2,6 +2,7 @@ const itemContainer = document.getElementById("cardContainer");
 const categoriesContainer = document.getElementById("categories");
 
 const api = "https://bsale-store-d.herokuapp.com/";
+// const api = "http://localhost:3001/";
 
 const card = (item) => {
   return `
