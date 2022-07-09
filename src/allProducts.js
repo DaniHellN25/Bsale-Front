@@ -39,11 +39,10 @@ const getAllItems = () => {
       let section = [];
       response.forEach((item) => {
         if (!section.includes(item.category)) {
-          itemContainer.innerHTML += `<section class="section center">
-                <div>
+          itemContainer.innerHTML += 
+          `<section class="section center">
                 <button class="myBtnFilter col s8 m8 l8 offset-s2 offset-m2 offset-l2 btn left red">${item.category}</button>
-                </section>
-        </div>`;
+          </section>`;
 
           section.push(item.category);
         }
@@ -95,4 +94,5 @@ form.onsubmit = (e) => {
       }
     })
     .catch((error) => console.error(error));
+    query.value = ''
 };
