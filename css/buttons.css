@@ -3,12 +3,14 @@ margin-right: 1rem;
 margin-bottom: 1rem;
 border-radius: 1rem;
 font-size: small;
+font-weight: bold;
 }
 .myBtnFilter{
 margin-right: 1rem;
 margin-bottom: 1rem;
 border-radius: 1rem;
 font-size: medium;
+font-weight: bold;
 width: 100%;
 }
 
