@@ -1,7 +1,8 @@
 const itemContainer = document.getElementById("cardContainer");
 const categoriesContainer = document.getElementById("categories");
 
-const api = "https://bsale-store-d.herokuapp.com/";
+// const api = "https://bsale-store-d.herokuapp.com/";
+const api = "http://localhost:3001/";
 
 
 const card = (item) => {
@@ -76,6 +77,7 @@ form.onsubmit = (e) => {
     method: "post",
     headers: {
       "Content-type": "application/json",
+      mode: "cors"
     },
     body: JSON.stringify({
       name: query.value,
