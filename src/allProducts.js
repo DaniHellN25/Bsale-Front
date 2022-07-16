@@ -9,6 +9,7 @@ const api = "https://bsale-store-d.herokuapp.com/";
 // const api = "http://localhost:3001/";
 
 //Estructura que tendrá la card de cada item
+//en la linea 24-8 condicionamos la aparicón del descuento
 const card = (item) => {
   return `
     <div   class="col s8 m4 l4">
@@ -80,10 +81,14 @@ const getAllCategories = () => {
 };
 
 
-//Este evento nos permite cargar las cards y los botones al momento que el usuario ingresa a la página y se haya cargado el DOM
+//Este evento nos permite cargar las cards y los botones al momento que el usuario ingresa a la página
 document.addEventListener("loadstart", getAllItems());
 document.addEventListener("loadstart", getAllCategories());
 
+
+
+//Guardamos nuestro form en una const para darle el evento onsubmit y mandar 
+// el valor de query(valor del input en el momento del submit) a nuestra petición fetch
 const form = document.getElementById("searchBar");
 const query = document.querySelector("input");
 
@@ -104,8 +109,10 @@ form.onsubmit = (e) => {
       console.log(response);
       itemContainer.innerHMTL = "";
       if (response.msg) {
+        //si no existe el producto mostramos el mensaje
         itemContainer.innerHTML = `<h1>No existe el producto</h1>`;
       } else {
+        //Mostramos el/los productos que coincidan con la busqueda
         itemContainer.innerHTML = "";
         response.forEach((item) => {
           itemContainer.innerHTML += card(item);
