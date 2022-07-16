@@ -1,10 +1,14 @@
+//Constantes para añadir los elementos de cards
+//y los botones de filtro por categoría
 const itemContainer = document.getElementById("cardContainer");
 const categoriesContainer = document.getElementById("categories");
 
+
+//URL de la API
 const api = "https://bsale-store-d.herokuapp.com/";
 // const api = "http://localhost:3001/";
 
-
+//Estructura que tendrá la card de cada item
 const card = (item) => {
   return `
     <div   class="col s8 m4 l4">
@@ -33,14 +37,20 @@ const card = (item) => {
     `;
 };
 
+
+
+//Petición de todos los item a la API
+
 const getAllItems = () => {
   fetch(api + "products")
     .then((response) => response.json())
     .then((response) => {
       itemContainer.innerHTML = "";
+      //Array para controlar que secciones ya se crearon 
       let section = [];
       response.forEach((item) => {
         if (!section.includes(item.category)) {
+          //Creamos la división
           itemContainer.innerHTML += 
           `<section class="section center">
                 <button class="myBtnFilter col s8 m8 l8 offset-s2 offset-m2 offset-l2 btn left red">${item.category}</button>
@@ -48,25 +58,31 @@ const getAllItems = () => {
 
           section.push(item.category);
         }
+        //Creamos las cards
         itemContainer.innerHTML += card(item);
       });
     })
     .catch((error) => console.error(error));
 };
 
+
+//Petición para tener un array de las categorías disponibles
 const getAllCategories = () => {
   fetch(`${api}categories`)
     .then((response) => response.json())
     .then((response) => {
       response.forEach((category) => {
+        //generamos los botones
         categoriesContainer.innerHTML += `<button id="${category.id}" class="myBtn col s5 m3 l3 btn red" onClick="filterByCategory(${category.id})">${category.name}</button>`;
       });
     })
     .catch((error) => console.error(error));
 };
 
-document.addEventListener("loadstart", getAllItems());
-document.addEventListener("loadstart", getAllCategories());
+
+//Este evento nos permite cargar las cards y los botones al momento que el usuario ingresa a la página y se haya cargado el DOM
+document.addEventListener("DOMContentLoaded", getAllItems());
+document.addEventListener("DOMContentLoaded", getAllCategories());
 
 const form = document.getElementById("searchBar");
 const query = document.querySelector("input");

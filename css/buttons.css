@@ -1,3 +1,4 @@
+/*Estilos para los botones de filtro alfabetico y para mostrar todas las recetas*/
 .myBtn{
 margin-right: 1rem;
 margin-bottom: 1rem;
@@ -5,6 +6,8 @@ border-radius: 1rem;
 font-size: small;
 font-weight: bold;
 }
+
+/*Estilos de los botones para filtrar por categoría*/
 .myBtnFilter{
 margin-right: 1rem;
 margin-bottom: 1rem;
