@@ -81,8 +81,8 @@ const getAllCategories = () => {
 
 
 //Este evento nos permite cargar las cards y los botones al momento que el usuario ingresa a la página y se haya cargado el DOM
-document.addEventListener("DOMContentLoaded", getAllItems());
-document.addEventListener("DOMContentLoaded", getAllCategories());
+document.addEventListener("loadstart", getAllItems());
+document.addEventListener("loadstart", getAllCategories());
 
 const form = document.getElementById("searchBar");
 const query = document.querySelector("input");
