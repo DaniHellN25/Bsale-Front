@@ -61,7 +61,7 @@
 
 ### Las card de los productos están dividas por secciones (utilizando el sistema de grid brindado por MaterializeCSS) de acuerdo a su categoría. Los datos de las cards que se muestran son  su imagen, su precio, su precio con descuento(en caso de que exista), un botón para añadir al carrito de compra y el nombre del producto.
  
-![image](/client/resources/Ejemplo%20Cards%20y%20secciones.png)
+![image](resources/Ejemplo%20Cards%20y%20secciones.png)
 
 ---
 
@@ -69,4 +69,4 @@
 
 ### Por último se cuenta con un footer con el botón "Subir" para regresar al inicio de la página.
 
-![image](/client/resources/Footer%20con%20bot%C3%B3n%20para%20ir%20al%20inicio.png)
+![image](resources/Footer%20con%20bot%C3%B3n%20para%20ir%20al%20inicio.png)
