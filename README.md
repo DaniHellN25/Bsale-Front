@@ -53,7 +53,7 @@
 
 ### La siguiente sección es para buscar productos según se categoría.
 
-![image](/client/resources/Ejemplo%20Navbar%20con%20filtro%20alfab%C3%A9tico%2C%20searchbar%20y%20botones%20de%20filtro%20por%20categor%C3%ADa.png.png)
+![image](blob/main/resources/Ejemplo%20Navbar%20con%20filtro%20alfab%C3%A9tico%2C%20searchbar%20y%20botones%20de%20filtro%20por%20categor%C3%ADa.png.png)
 
 ---
 
